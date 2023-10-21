@@ -51,7 +51,7 @@ trait HasTranslate
     {
         $result = [];
         foreach ($this->resource->getTranslates() as $translate) {
-            $result[$translate->lang] = $translate->getFields();
+            $result[$translate->getLocale()] = $translate->getFields();
         }
 
         return $result;
